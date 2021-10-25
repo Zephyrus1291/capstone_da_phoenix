@@ -66,7 +66,7 @@ df_ethereum = df_ethereum.set_index('periode')
 @app.route("/")
 def index(): 
 	
-	card_data = f'{data["volume"].mean().round(2)}' #be careful with the " and ' 
+	card_data = f'{df_ethereum["volume"].mean()} #be careful with the " and ' 
 
 	# generate plot
 	ax = df_ethereum.plot(figsize = (20,9)) 
